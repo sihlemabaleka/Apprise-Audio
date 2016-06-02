@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ClickableViewAccessibility">
+        <ignore path="src/com/bloocheeze/android/views/CircularSeekBar.java" />
+    </issue>
+    <issue id="NewApi">
+        <ignore path="src/com/bloocheeze/android/PlayerFragment.java" />
+    </issue>
+</lint>

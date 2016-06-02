@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.bloocheeze.android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.bloocheeze.android.MainActivity$PlaceholderFragment" >
+
+    <ImageView
+        android:id="@+id/background_art"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6" >
+
+            <ImageView
+                android:id="@+id/album_art"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:scaleType="centerCrop" />
+
+            <com.bloocheeze.android.views.CircularSeekBar
+                android:id="@+id/track_seekbar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:circle_color="@android:color/white"
+                app:circle_x_radius="100dp"
+                app:circle_y_radius="100dp"
+                app:end_angle="270"
+                app:pointer_alpha_ontouch="100"
+                app:pointer_color="#0174DF"
+                app:pointer_halo_color="#880174DF"
+                app:start_angle="270"
+                app:use_custom_radii="true" />
+
+            <ImageButton
+                android:id="@+id/play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/white_circle_border"
+                android:padding="15dp"
+                android:src="@drawable/ic_pause" />
+
+            <ImageButton
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/track_seekbar"
+                android:background="#05000000"
+                android:padding="5dp"
+                android:src="@drawable/ic_next" />
+
+            <ImageButton
+                android:id="@+id/previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/next"
+                android:layout_toLeftOf="@+id/track_seekbar"
+                android:background="#05000000"
+                android:padding="5dp"
+                android:src="@drawable/ic_previous" />
+
+            <TextView
+                android:id="@+id/elapsed_time"
+                style="@style/textShadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/track_seekbar"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:background="#30000000"
+            android:clickable="false" >
+
+            <TextView
+                android:id="@+id/artist_name"
+                style="@style/textShadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/song_title"
+                style="@style/textShadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/artist_name"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/album_title"
+                style="@style/textShadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/song_title"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <ImageButton
+                android:id="@+id/repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/album_title"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:src="@drawable/ic_repeat" />
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/album_title"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:src="@drawable/ic_shuffle" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
